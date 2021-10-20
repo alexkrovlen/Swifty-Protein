@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="REs-0m-BuZ">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="Yth-bl-B3L">
+            <objects>
+                <viewController id="REs-0m-BuZ" customClass="LoginViewController" customModule="SwiftyProtein" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rYr-E1-h4T">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofQ-hk-NPB">
+                                <rect key="frame" x="100" y="269" width="120" height="30"/>
+                                <state key="normal" title="Login"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPL-k8-jVC">
+                                <rect key="frame" x="108" y="315" width="104" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="37U-ZA-EbZ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="104" id="Lgg-Bg-Xow"/>
+                                    <constraint firstAttribute="width" secondItem="WPL-k8-jVC" secondAttribute="height" multiplier="52:55" id="t7p-ZW-XTg"/>
+                                </constraints>
+                                <state key="normal" title="Touch ID" image="touch_id">
+                                    <color key="titleShadowColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="WPL-k8-jVC" firstAttribute="centerX" secondItem="ITo-rn-DiS" secondAttribute="centerX" id="AdA-UY-sL3"/>
+                            <constraint firstItem="WPL-k8-jVC" firstAttribute="top" secondItem="ofQ-hk-NPB" secondAttribute="bottom" constant="16" id="H8I-WU-2bO"/>
+                            <constraint firstItem="ofQ-hk-NPB" firstAttribute="centerY" secondItem="ITo-rn-DiS" secondAttribute="centerY" id="XaD-Sa-tYg"/>
+                            <constraint firstItem="ITo-rn-DiS" firstAttribute="trailing" secondItem="ofQ-hk-NPB" secondAttribute="trailing" constant="100" id="bf1-8a-IQS"/>
+                            <constraint firstItem="ofQ-hk-NPB" firstAttribute="leading" secondItem="ITo-rn-DiS" secondAttribute="leading" constant="100" id="flN-xW-I2u"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ITo-rn-DiS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uxi-Wp-CtY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-662.31884057971024" y="122.54464285714285"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="SwiftyProtein" customModuleProvider="target" sceneMemberID="viewController">
+                    <sceneKitView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </sceneKitView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="119"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="touch_id" width="512" height="512"/>
+    </resources>
+</document>
