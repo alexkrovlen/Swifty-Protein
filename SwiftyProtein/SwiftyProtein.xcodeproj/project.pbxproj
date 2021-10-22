@@ -15,6 +15,7 @@
 		0C5BB9F7271EFF2D00EABF97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C5BB9F5271EFF2D00EABF97 /* Main.storyboard */; };
 		0C5BB9F9271EFF2E00EABF97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C5BB9F8271EFF2E00EABF97 /* Assets.xcassets */; };
 		0C5BB9FC271EFF2E00EABF97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C5BB9FA271EFF2E00EABF97 /* LaunchScreen.storyboard */; };
+		0C7B2D4B272318FF00154144 /* ligands.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0C7B2D4A272318FF00154144 /* ligands.txt */; };
 		0C7E2BDB272068C400135E56 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7E2BDA272068C400135E56 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		0C5BB9F8271EFF2E00EABF97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C5BB9FB271EFF2E00EABF97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C5BB9FD271EFF2E00EABF97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C7B2D4A272318FF00154144 /* ligands.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ligands.txt; sourceTree = "<group>"; };
 		0C7E2BDA272068C400135E56 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +74,7 @@
 				0C5BB9F8271EFF2E00EABF97 /* Assets.xcassets */,
 				0C5BB9FA271EFF2E00EABF97 /* LaunchScreen.storyboard */,
 				0C5BB9FD271EFF2E00EABF97 /* Info.plist */,
+				0C7B2D4A272318FF00154144 /* ligands.txt */,
 			);
 			path = SwiftyProtein;
 			sourceTree = "<group>";
@@ -135,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C5BB9F2271EFF2D00EABF97 /* art.scnassets in Resources */,
+				0C7B2D4B272318FF00154144 /* ligands.txt in Resources */,
 				0C5BB9FC271EFF2E00EABF97 /* LaunchScreen.storyboard in Resources */,
 				0C5BB9F9271EFF2E00EABF97 /* Assets.xcassets in Resources */,
 				0C5BB9F7271EFF2D00EABF97 /* Main.storyboard in Resources */,
