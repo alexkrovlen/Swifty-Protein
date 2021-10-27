@@ -1,5 +1,5 @@
 //
-//  GameViewController.swift
+//  ProteinViewController.swift
 //  SwiftyProtein
 //
 //  Created by Flash Jessi on 10/19/21.
@@ -10,10 +10,19 @@ import UIKit
 import QuartzCore
 import SceneKit
 
-class GameViewController: UIViewController {
+class ProteinViewController: UIViewController {
 
+    var protein: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        guard let protein = protein else { return }
+        print(protein)
+        self.navigationItem.title = protein
+        let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor(red: 42 / 255, green: 98 / 255, blue: 255 / 255, alpha: 1)]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
+        
         
         // create a new scene
         let scene = SCNScene(named: "art.scnassets/ship.scn")!

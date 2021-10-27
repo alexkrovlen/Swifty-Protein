@@ -76,10 +76,15 @@
                             <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="56e-8P-2ZK">
                                 <rect key="frame" x="0.0" y="88" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="lV2-78-f7b" id="bnW-ep-rh1"/>
+                                </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zgZ-a4-oYS">
                                 <rect key="frame" x="0.0" y="144" width="414" height="718"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="separatorColor" red="0.1645470262" green="0.38275489210000002" blue="0.99974590539999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="0pM-3g-zV0">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
@@ -95,6 +100,9 @@
                                     <outlet property="delegate" destination="lV2-78-f7b" id="BCP-ay-jIt"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="stc-gd-Pyu">
+                                <rect key="frame" x="188.66666666666666" y="456.66666666666669" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -102,16 +110,20 @@
                             <constraint firstItem="sAw-Sr-dFD" firstAttribute="leading" secondItem="56e-8P-2ZK" secondAttribute="leading" id="3Ac-fc-o2u"/>
                             <constraint firstItem="sAw-Sr-dFD" firstAttribute="trailing" secondItem="56e-8P-2ZK" secondAttribute="trailing" id="6Ge-Pm-ThS"/>
                             <constraint firstItem="sAw-Sr-dFD" firstAttribute="top" secondItem="56e-8P-2ZK" secondAttribute="top" id="U0Z-ZU-eHZ"/>
+                            <constraint firstItem="stc-gd-Pyu" firstAttribute="centerX" secondItem="sAw-Sr-dFD" secondAttribute="centerX" id="hjf-cn-u0a"/>
                             <constraint firstItem="zgZ-a4-oYS" firstAttribute="bottom" secondItem="sAw-Sr-dFD" secondAttribute="bottom" id="ikD-ik-V0P"/>
                             <constraint firstItem="zgZ-a4-oYS" firstAttribute="top" secondItem="56e-8P-2ZK" secondAttribute="bottom" id="ly2-1G-GPa"/>
                             <constraint firstItem="sAw-Sr-dFD" firstAttribute="trailing" secondItem="zgZ-a4-oYS" secondAttribute="trailing" id="odi-RP-qHU"/>
+                            <constraint firstItem="stc-gd-Pyu" firstAttribute="centerY" secondItem="sAw-Sr-dFD" secondAttribute="centerY" id="wPw-Ib-TnQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sAw-Sr-dFD"/>
                     </view>
                     <navigationItem key="navigationItem" id="GM4-J2-V4J"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="stc-gd-Pyu" id="JfN-b1-BgE"/>
                         <outlet property="myTable" destination="zgZ-a4-oYS" id="lxI-Wr-Dmd"/>
                         <outlet property="searchBar" destination="56e-8P-2ZK" id="eNW-eu-E7D"/>
+                        <segue destination="BV1-FR-VrT" kind="show" identifier="protein" id="Trn-4z-359"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="elE-Nf-am9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -168,19 +180,20 @@
             </objects>
             <point key="canvasLocation" x="299" y="-442"/>
         </scene>
-        <!--Game View Controller-->
+        <!--Protein View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="SwiftyProtein" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" customClass="ProteinViewController" customModule="SwiftyProtein" customModuleProvider="target" sceneMemberID="viewController">
                     <sceneKitView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     </sceneKitView>
+                    <navigationItem key="navigationItem" id="LvX-xh-5qe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1292.753623188406" y="285.9375"/>
+            <point key="canvasLocation" x="1094" y="286"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cCs-NF-rfM">

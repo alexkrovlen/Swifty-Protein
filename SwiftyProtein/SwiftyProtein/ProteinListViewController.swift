@@ -12,6 +12,14 @@ class ProteinListViewController: UIViewController {
 
     @IBOutlet weak var myTable: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    var proteins: [String] = {
+        let protein = "ligands.txt".readFile().split(separator: "\n").map { String($0) }
+        return protein
+    }()
+    var filterProteins = [String]()
+    var protein: String?
     
     lazy var gradient: CAGradientLayer = {
         let gradient = CAGradientLayer()
@@ -33,6 +41,9 @@ class ProteinListViewController: UIViewController {
         gradient.frame = view.bounds
         self.view.layer.insertSublayer(gradient, at: 0)
         myTable.backgroundColor = .clear
+        
+//        searchBar.delegate = self
+        filterProteins = proteins
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,7 +59,7 @@ extension ProteinListViewController: UITableViewDelegate {
 
 extension ProteinListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return filterProteins.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -57,10 +68,43 @@ extension ProteinListViewController: UITableViewDataSource {
         }
         
         cell.backgroundColor = .clear
-        cell.textLabel?.text = "fhg"
+        cell.textLabel?.text = filterProteins[indexPath.row]
         
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        protein = filterProteins[indexPath.row]
+        getProteinInformation(protein: protein!)
+    }
     
+    func getProteinInformation(protein: String) {
+        activityIndicator.startAnimating()
+        self.performSegue(withIdentifier: "protein", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let vc = segue.destination as? ProteinViewController else { return }
+        vc.protein = protein
+    }
+    
+}
+
+extension ProteinListViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filterProteins = []
+        
+        if searchText == "" {
+            filterProteins = proteins
+        } else {
+            for protein in proteins {
+                if protein.uppercased().contains(searchText.uppercased()) {
+                    filterProteins.append(protein)
+                }
+            }
+        }
+        self.myTable.reloadData()
+    }
 }

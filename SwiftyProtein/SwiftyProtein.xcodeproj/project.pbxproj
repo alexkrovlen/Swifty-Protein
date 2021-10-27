@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		0C356FE82721C3B200484D3A /* ProteinListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C356FE72721C3B200484D3A /* ProteinListViewController.swift */; };
 		0C356FEA2721C3CD00484D3A /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C356FE92721C3CD00484D3A /* PasswordViewController.swift */; };
+		0C52CBBF27297DAC00F32598 /* ExtensionReadFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C52CBBE27297DAC00F32598 /* ExtensionReadFile.swift */; };
+		0C52CBC1272993E100F32598 /* ProteinRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C52CBC0272993E100F32598 /* ProteinRequest.swift */; };
 		0C5BB9F0271EFF2D00EABF97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5BB9EF271EFF2D00EABF97 /* AppDelegate.swift */; };
 		0C5BB9F2271EFF2D00EABF97 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C5BB9F1271EFF2D00EABF97 /* art.scnassets */; };
-		0C5BB9F4271EFF2D00EABF97 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5BB9F3271EFF2D00EABF97 /* GameViewController.swift */; };
+		0C5BB9F4271EFF2D00EABF97 /* ProteinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5BB9F3271EFF2D00EABF97 /* ProteinViewController.swift */; };
 		0C5BB9F7271EFF2D00EABF97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C5BB9F5271EFF2D00EABF97 /* Main.storyboard */; };
 		0C5BB9F9271EFF2E00EABF97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C5BB9F8271EFF2E00EABF97 /* Assets.xcassets */; };
 		0C5BB9FC271EFF2E00EABF97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C5BB9FA271EFF2E00EABF97 /* LaunchScreen.storyboard */; };
@@ -22,10 +24,12 @@
 /* Begin PBXFileReference section */
 		0C356FE72721C3B200484D3A /* ProteinListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProteinListViewController.swift; sourceTree = "<group>"; };
 		0C356FE92721C3CD00484D3A /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
+		0C52CBBE27297DAC00F32598 /* ExtensionReadFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionReadFile.swift; sourceTree = "<group>"; };
+		0C52CBC0272993E100F32598 /* ProteinRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProteinRequest.swift; sourceTree = "<group>"; };
 		0C5BB9EC271EFF2D00EABF97 /* SwiftyProtein.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftyProtein.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C5BB9EF271EFF2D00EABF97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C5BB9F1271EFF2D00EABF97 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		0C5BB9F3271EFF2D00EABF97 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		0C5BB9F3271EFF2D00EABF97 /* ProteinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProteinViewController.swift; sourceTree = "<group>"; };
 		0C5BB9F6271EFF2D00EABF97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0C5BB9F8271EFF2E00EABF97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C5BB9FB271EFF2E00EABF97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,10 +70,12 @@
 			children = (
 				0C5BB9EF271EFF2D00EABF97 /* AppDelegate.swift */,
 				0C5BB9F1271EFF2D00EABF97 /* art.scnassets */,
-				0C5BB9F3271EFF2D00EABF97 /* GameViewController.swift */,
 				0C7E2BDA272068C400135E56 /* LoginViewController.swift */,
 				0C356FE92721C3CD00484D3A /* PasswordViewController.swift */,
 				0C356FE72721C3B200484D3A /* ProteinListViewController.swift */,
+				0C5BB9F3271EFF2D00EABF97 /* ProteinViewController.swift */,
+				0C52CBC0272993E100F32598 /* ProteinRequest.swift */,
+				0C52CBBE27297DAC00F32598 /* ExtensionReadFile.swift */,
 				0C5BB9F5271EFF2D00EABF97 /* Main.storyboard */,
 				0C5BB9F8271EFF2E00EABF97 /* Assets.xcassets */,
 				0C5BB9FA271EFF2E00EABF97 /* LaunchScreen.storyboard */,
@@ -152,9 +158,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C52CBC1272993E100F32598 /* ProteinRequest.swift in Sources */,
 				0C7E2BDB272068C400135E56 /* LoginViewController.swift in Sources */,
+				0C52CBBF27297DAC00F32598 /* ExtensionReadFile.swift in Sources */,
 				0C356FEA2721C3CD00484D3A /* PasswordViewController.swift in Sources */,
-				0C5BB9F4271EFF2D00EABF97 /* GameViewController.swift in Sources */,
+				0C5BB9F4271EFF2D00EABF97 /* ProteinViewController.swift in Sources */,
 				0C356FE82721C3B200484D3A /* ProteinListViewController.swift in Sources */,
 				0C5BB9F0271EFF2D00EABF97 /* AppDelegate.swift in Sources */,
 			);
