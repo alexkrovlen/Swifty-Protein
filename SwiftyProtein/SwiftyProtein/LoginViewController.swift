@@ -35,13 +35,21 @@ class LoginViewController: UIViewController {
         self.view.layer.insertSublayer(gradient, at: 0)
         
         touchIDButton.backgroundColor = UIColor(white: 1, alpha: 0.6)
-        touchIDButton.layer.cornerRadius = touchIDButton.frame.width / 2
+        
         login.layer.cornerRadius = 16
         login.backgroundColor = UIColor(white: 1, alpha: 0.6)
         
         if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) {
             print("touchIDButton yes")
              touchIDButton.isHidden = false
+            print(context.biometryType)
+            if context.biometryType == .faceID {
+                touchIDButton.setImage(UIImage(named: "face_id"), for: .normal)
+                touchIDButton.layer.cornerRadius = 16
+            } else {
+                touchIDButton.setImage(UIImage(named: "touch_id"), for: .normal)
+                touchIDButton.layer.cornerRadius = touchIDButton.frame.width / 2
+            }
         } else {
             print("touchIDButton no")
              touchIDButton.isHidden = true
@@ -54,7 +62,7 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func loginTap(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "password", sender: self)
+        self.performSegue(withIdentifier: "proteinList", sender: self)
     }
     
     @IBAction func touchID(_ sender: UIButton) {
